@@ -119,8 +119,6 @@ scrollBottom.forEach((e1)=>observer.observe(e1));
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((e1)=>observer.observe(e1));
 
-
-
 // contact
 
 
