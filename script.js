@@ -118,3 +118,29 @@ scrollBottom.forEach((e1)=>observer.observe(e1));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((e1)=>observer.observe(e1));
+
+
+
+// contact
+
+
+
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click',function(e){
+        e.preventDefault()
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        var body = 'Name: '+name + '<br/> Email: ' + email + '<br/> Subject: '+subject+ '<br/> Message: '+message;
+
+        Email.send({
+            SecureToken : "58564ae2-457a-4c89-be85-e22b794669c0",
+            To : 'ishita126jain@gmail.com',
+            From : email,
+            Subject : subject,
+            Body : body
+        }).then(
+          message => alert(message)
+        );
+    })
